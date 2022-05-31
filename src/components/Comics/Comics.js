@@ -39,7 +39,7 @@ class Comics {
         if (data) {
             this.renderComics(data);
         } else {
-            // Error.render();
+            Error.render();
         }
     }
 
