@@ -1,0 +1,78 @@
+.characters__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+
+.characters__close {
+    position: absolute;
+    top: var(--spacing-l);
+    right: var(--spacing-l);
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border: 0 none;
+}
+
+.characters__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1200px;
+    height: 600px;
+    margin: auto;
+    padding: var(--spacing-l);
+    background-color: var(--color-light);
+    overflow: auto;
+}
+
+.characters__item {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    max-height: 300px;
+    margin: var(--spacing-m);
+    border: 4px solid var(--color-white);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    list-style: none;
+    transition: 0.3s ease-in;
+}
+
+.characters__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.characters__name {
+    margin-top: auto;
+    padding: var(--spacing-s);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.characters__item:hover {
+    height: auto;
+}
+
+.characters__item:hover .characters__name {
+    white-space: initial;
+    text-overflow: initial;
+}

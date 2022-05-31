@@ -8,6 +8,8 @@
     --spacing-s: 10px;
     --spacing-m: 15px;
     --spacing-l: 20px;
+
+    --box-shadow: 0 2px 24px rgba(168, 175, 196, 0.5)
 }
 
 body {
