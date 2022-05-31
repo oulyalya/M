@@ -1,6 +1,7 @@
 import { IMG_STANDARD_XLARGE } from '../../constants/api';
 import { getDataApi } from '../../utils/getDataApi';
 import { ROOT_MODAL } from '../../constants/root';
+import Notification from '../Notification';
 
 import './Characters.css';
 import imgCloseWhite from '../../img/close-white.svg';
@@ -36,17 +37,13 @@ class Characters {
         ROOT_MODAL.innerHTML = htmlWrapper;
     }
 
-    renderNotification() {
-        console.log('Данных нет');
-    }
-
     async render(uri) {
         const data = await getDataApi.getData(uri);
 
         if (data.length) {
             this.renderContent(data);
         } else {
-            this.renderNotification();
+            Notification.render();
         }
     }
 }
